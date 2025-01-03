@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshyam Mishra - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #0f0;
+            overflow-x: hidden;
+            min-height: 100vh; /* Ensures the page takes full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1; /* Makes sure the content section takes available space */
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                rgba(0, 255, 0, 0.05) 0%, rgba(0, 255, 0, 0.05) 2px,
+                transparent 2px, transparent 4px
+            );
+            z-index: -1;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1920x1080/?matrix,ai') no-repeat center;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: -1;
+        }
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: transparent;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #0f0;
+            text-shadow: 0 0 10px #0f0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0f0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #090;
+            text-shadow: 0 0 15px #0f0;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin: 0;
+            color: #0f0;
+            text-shadow: 0 0 12px #0f0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+            color: #ccc;
+        }
+        .hero a {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #0f0;
+            color: #121212;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .hero a:hover {
+            background-color: #090;
+            transform: scale(1.05);
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background: #121212;
+            margin-top: 50px;
+            margin-bottom: 0; /* Removes extra space before footer */
+        }
+        .section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .section p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #0f0;
+            line-height: 1.6;
+        }
+        .terminal {
+            text-align: left;
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #0f0;
+            border: 1px solid #0f0;
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .terminal p {
+            margin: 5px 0;
+        }
+        footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        footer p {
+            font-size: 1rem;
+            color: #0f0;
+        }
+        footer a {
+            color: #0f0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #090;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 8px #00f;
+            }
+            to {
+                text-shadow: 0 0 20px #00f;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sakshyam Mishra</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Hello, I'm <span class="ai">Sakshyam Mishra</span></h2>
+            <p>A student passionate about cybersecurity and a Junior Pentester.</p>
+            <a href="#contact">Connect with Me</a>
+        </section>
+
+        <section id="about" class="section">
+            <h3>About Me</h3>
+            <p>I am a student exploring the exciting world of cybersecurity. With a keen interest in ethical hacking and penetration testing, I am constantly improving my skills to secure systems and protect data.</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h3>My Skills</h3>
+            <div class="terminal">
+                <p>> Cybersecurity Enthusiast</p>
+                <p>> Junior Pentester</p>
+                <p>> Ethical Hacking & Penetration Testing</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h3>Contact Me</h3>
+            <p>Feel free to connect with me on social platforms or drop me a message.</p>
+            <p>
+                <a href="https://www.instagram.com/sakshyam.msra/" target="_blank">Instagram</a> | 
+                <a href="https://www.linkedin.com/in/samarpan-mishra-371b50308/" target="_blank">LinkedIn</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sakshyam Mishra | <a href="#">Back to Top</a></p>
+    </footer>
+
+</body>
+</html>
